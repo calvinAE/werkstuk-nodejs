@@ -37,8 +37,9 @@ router.get('/reviews/:author', async (req, res) => {
         review.findOne({author: author},function (error, foundReview) {
             if(foundReview == null){
                 res.send('No reviews found from that author')
-            }
-            res.json(foundReview);});
+            } else {
+                res.json(foundReview);}
+        });
     }
     catch (error) {
         res.status(500).json({ error: error.message })

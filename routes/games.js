@@ -37,8 +37,10 @@ router.get('/games/:name', async (req, res) => {
         game.findOne({name: name},function (error, foundGame) {
             if(foundGame == null){
                 res.send('No games found with that name')
-            }
-            res.json(foundGame);});
+            } else {
+                res.json(foundGame);}
+        });
+
     }
     catch (error) {
         res.status(500).json({ error: error.message })
