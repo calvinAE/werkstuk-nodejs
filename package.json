@@ -1,0 +1,23 @@
+{
+  "name": "werkstuk-nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS werkstuk voor Backend Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvinAE/werkstuk-nodejs.git"
+  },
+  "author": "Calvin A.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calvinAE/werkstuk-nodejs/issues"
+  },
+  "homepage": "https://github.com/calvinAE/werkstuk-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2"
+  }
+}
