@@ -78,7 +78,8 @@ router.post('/games', async (req, res) => {
 
 
 //    PATCH   //
-//UPDATE by ID reviews
+
+//UPDATE game by ID
 router.patch('/games/:id([0-9a-f]{24})', async (req, res) => {
     try {
         const id = req.params.id;
