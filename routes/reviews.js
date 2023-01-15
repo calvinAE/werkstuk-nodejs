@@ -10,8 +10,15 @@ module.exports = router;
 //GET all reviews
 router.route("/reviews").get(async function (req, res) {
     try {
+        const limit = req.query.limit
+
+        if(limit != null){
+            const data = await review.find().limit(limit);
+            res.json(data)
+        } else {
         const data = await review.find();
         res.json(data)
+        }
     }
     catch (error) {
         res.status(500).json({ error: error.message })

@@ -9,8 +9,15 @@ module.exports = router;
 //GET all games
 router.route("/games").get(async function (req, res) {
     try {
+        const limit = req.query.limit
+
+        if(limit != null){
+            const data = await game.find().limit(limit);
+            res.json(data)
+        } else {
         const data = await game.find();
         res.json(data)
+        }
     }
     catch (error) {
         res.status(500).json({ error: error.message })
